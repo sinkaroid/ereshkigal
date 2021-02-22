@@ -4,6 +4,6 @@ python:
 
 install:
   - pip install -r requirements.txt
-before_script: cd app/bin
+before_script: cd src
 script:
-  - bash rank.sh
+  - python app.py 9472577 # damda

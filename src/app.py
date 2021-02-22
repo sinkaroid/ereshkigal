@@ -1,6 +1,3 @@
-#!python
-#!C:\Python37\python.exe
-
 from urllib import request
 import threading
 import queue
@@ -117,7 +114,8 @@ class pixiv:
     def multi_data(self, data_list=None, jumlah=25):
         if not data_list:
             data_list = self.data_low
-        print("New Item:", len(data_list))
+        print("New Item:", len(data_list), '/', sys.argv[1])
+        # print(sys.argv[1])
         _threads = []
         _queue = queue.Queue(maxsize=jumlah)
         task_main = threading.Thread(target=self.add_queue, args=(_queue, data_list))
@@ -142,7 +140,7 @@ class pixiv:
 if len(sys.argv) == 2:
     imgdir = sys.argv[1]
 else:
-    print('usage: ./app.py [--ilustid]')
+    print(f'usage: {sys.argv[0]} [ilustid]')
     exit(2)
 if __name__ == '__main__':
     try:
