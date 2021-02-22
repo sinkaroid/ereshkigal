@@ -153,5 +153,5 @@ if __name__ == '__main__':
 
 subprocess.call('python galer.py', shell=True) # nosec
 print("local viewer saved > gallery.html")
-title=os.getcwd()
-webbrowser.open_new_tab(title+"/gallery.html")
+# title=os.getcwd()
+# webbrowser.open_new_tab(title+"/gallery.html") ffs idiot
