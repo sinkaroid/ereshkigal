@@ -10,8 +10,3 @@ Approach and boost up your pixiv favorite artist! (zero dependencies)
 ```py
 self.sort_data(re.findall('"url_big":"[^"]*"', _json_details))
 ```
-
-usage:
----- 
-     cd src 
-     ./app.py 9472577
